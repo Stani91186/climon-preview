@@ -63,8 +63,8 @@
   --shadow-sm:0 1px 2px rgba(12,45,48,.05), 0 2px 8px rgba(12,45,48,.05);
   --shadow:0 4px 12px rgba(12,45,48,.07), 0 16px 40px rgba(12,45,48,.07);
   --shadow-lg:0 8px 24px rgba(12,45,48,.10), 0 32px 64px rgba(12,45,48,.10);
-  --r:14px; --r-lg:22px;
-  --sans:"Inter var",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --r:8px; --r-lg:12px;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
   --maxw:1180px;
 }
@@ -89,7 +89,7 @@ section{padding:clamp(64px,8vw,110px) 0}
 
 /* ---------- Buttons ---------- */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--sans);
-  font-size:16px;font-weight:600;padding:15px 26px;border-radius:999px;border:1.5px solid transparent;
+  font-size:16px;font-weight:600;padding:15px 26px;border-radius:10px;border:1.5px solid transparent;
   text-decoration:none;cursor:pointer;transition:transform .15s ease, box-shadow .15s ease, background .15s ease;white-space:nowrap}
 .btn:active{transform:translateY(1px)}
 .btn-primary{background:var(--accent);color:#fff;box-shadow:0 6px 18px rgba(18,133,95,.28)}
@@ -142,9 +142,9 @@ nav.links a:hover{color:var(--accent)}
 .hero .lead{color:rgba(255,255,255,.87);max-width:566px;text-shadow:0 1px 12px rgba(0,0,0,.3)}
 
 .pill{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.13);
-  border:1px solid rgba(255,255,255,.26);border-radius:999px;padding:7px 16px 7px 8px;
+  border:1px solid rgba(255,255,255,.26);border-radius:6px;padding:7px 16px 7px 8px;
   font-size:13.5px;font-weight:600;color:#fff;backdrop-filter:blur(10px);margin-bottom:26px}
-.pill b{background:var(--accent);color:#fff;padding:3px 10px;border-radius:999px;font-size:12.5px;white-space:nowrap}
+.pill b{background:var(--accent);color:#fff;padding:3px 10px;border-radius:4px;font-size:12.5px;white-space:nowrap}
 @media(max-width:430px){.pill{font-size:12.5px;padding:6px 13px 6px 6px;gap:7px}.pill b{font-size:11.5px;padding:3px 8px}}
 
 h1 .hl{position:relative;white-space:nowrap;color:#F6AC61}
@@ -232,9 +232,9 @@ header.nav:not(.stuck) .ph{border-bottom-color:rgba(255,255,255,.45)}
 .duo{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 @media(max-width:700px){.duo{grid-template-columns:1fr}}
 .duo-card{border-radius:var(--r-lg);padding:30px 28px;border:1px solid var(--line);background:var(--surface);box-shadow:var(--shadow-sm)}
-.duo-card.w{background:linear-gradient(165deg,#FDF4E5,#F8E6C8);border-color:#F0DCBA}
-.duo-card.c{background:linear-gradient(165deg,#EAF3FB,#D8E9F7);border-color:#CFE0F0}
-.duo-card .ic{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;margin-bottom:18px;background:rgba(255,255,255,.75)}
+.duo-card.w{background:#FCF1E0;border-color:#F0DCBA}
+.duo-card.c{background:#E7F0F9;border-color:#CFE0F0}
+.duo-card .ic{width:46px;height:46px;border-radius:8px;display:grid;place-items:center;margin-bottom:18px;background:rgba(255,255,255,.75)}
 .duo-card h3{margin-bottom:9px}
 .duo-card p{font-size:15.5px;color:var(--ink-2)}
 .duo-card ul{margin:16px 0 0;padding:0;list-style:none;font-size:14.5px;color:var(--ink-2)}
@@ -307,7 +307,7 @@ header.nav:not(.stuck) .ph{border-bottom-color:rgba(255,255,255,.45)}
 .pkg{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:30px 27px;display:flex;flex-direction:column;box-shadow:var(--shadow-sm);position:relative;transition:transform .2s, box-shadow .2s}
 .pkg:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
 .pkg.feat{border-color:var(--accent);box-shadow:var(--shadow);border-width:2px}
-.pkg .tag{position:absolute;top:-13px;left:27px;background:var(--accent);color:#fff;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:5px 13px;border-radius:999px}
+.pkg .tag{position:absolute;top:-13px;left:27px;background:var(--accent);color:#fff;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:5px 13px;border-radius:5px}
 .pkg .rooms{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
 .pkg h3{margin-bottom:8px}
 .pkg .desc{font-size:14.5px;color:var(--ink-2);margin-bottom:22px}
@@ -330,7 +330,7 @@ header.nav:not(.stuck) .ph{border-bottom-color:rgba(255,255,255,.45)}
 .cfg-mid small{font-size:11.5px;color:var(--ink-2);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
 .brands{display:flex;gap:9px;align-items:center;justify-content:center;flex-wrap:wrap;margin-top:20px}
 .brands-l{font-size:13px;color:var(--ink-3)}
-.brand{font-size:13.5px;font-weight:600;color:var(--ink-2);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 15px}
+.brand{font-size:13.5px;font-weight:600;color:var(--ink-2);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:7px 15px}
 
 /* ---------- Ablauf ---------- */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
@@ -394,7 +394,7 @@ details.f .a p+p{margin-top:11px}
 .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(18,133,95,.14)}
 .field textarea{resize:vertical;min-height:92px}
 .chips{display:flex;gap:8px;flex-wrap:wrap}
-.chip{font-family:inherit;font-size:14.5px;padding:10px 16px;border:1.5px solid var(--line);border-radius:999px;background:var(--bg);cursor:pointer;transition:.15s}
+.chip{font-family:inherit;font-size:14.5px;padding:10px 16px;border:1.5px solid var(--line);border-radius:8px;background:var(--bg);cursor:pointer;transition:.15s}
 .chip:hover{border-color:var(--sand-2);background:var(--sand)}
 .chip[aria-pressed=true]{background:var(--accent-soft);border-color:var(--accent);color:var(--accent-2);font-weight:600}
 .consent{display:flex;gap:11px;align-items:flex-start;font-size:13px;color:var(--ink-2);line-height:1.5;margin:6px 0 20px}
@@ -499,6 +499,8 @@ footer .logo{margin-bottom:14px}
   .rv,.hero-inner > *,.hero-stats .hstat{opacity:1 !important;transform:none !important;animation:none !important;transition:none !important}
   .result.bump .big{animation:none}
 }
+h1,h2,h3{text-wrap:balance}
+.sec-head h2{margin-bottom:18px}
 </style>
 
 <script type="application/ld+json">
@@ -670,7 +672,7 @@ footer .logo{margin-bottom:14px}
     <div class="hero-inner">
       <div class="pill"><b>Neu ab 21.07.2026</b> Bis zu 80&nbsp;% Zuschuss vom Staat</div>
       <h1>Im Sommer <span class="hl hl-c">k&uuml;hlen</span>.<br>Im Winter <span class="hl">heizen</span>.<br><span class="h1-key">Die W&auml;rmepumpe, die Sie nicht nur warm h&auml;lt &ndash; sondern im Sommer auch angenehm k&uuml;hl.</span></h1>
-      <p class="lead">Eine moderne Split-Klimaanlage ersetzt Ihre alte Heizung und macht aus 1 kWh Strom bis zu 5 kWh W&auml;rme. Wir planen, montieren und unterstützen Sie beim kompletten Förderantrag &mdash; Sie zahlen nur den Eigenanteil.</p>
+      <p class="lead">Eine moderne Split-Klimaanlage ersetzt Ihre alte Heizung und macht aus 1 kWh Strom bis zu 5 kWh W&auml;rme. Wir planen, montieren und unterstützen Sie beim kompletten Förderantrag &ndash; Sie zahlen nur den Eigenanteil.</p>
       <div class="hero-cta">
         <a href="#angebot" class="btn btn-primary btn-lg">Kostenloses Angebot anfordern</a>
         <a href="#foerderung" class="btn btn-ghost btn-lg">F&ouml;rderung berechnen</a>
@@ -710,7 +712,6 @@ footer .logo{margin-bottom:14px}
 <section id="vorteile">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">Luft-Luft-Wärmepumpe</div>
       <h2>Klimaanlage zum Heizen: die Wärmepumpe, die im Sommer kühlt</h2>
       <p class="lead">Eine Luft-Luft-Wärmepumpe ist technisch eine Klimaanlage, die sich umdrehen lässt. Im Winter holt sie Wärme aus der Außenluft ins Haus, im Sommer die Hitze wieder heraus. Ob Single-Split für einen Raum, Multisplit für die ganze Wohnung oder VRF fürs Einfamilienhaus: Sie kaufen ein Gerät und lösen zwei Probleme.</p>
     </div>
@@ -719,7 +720,7 @@ footer .logo{margin-bottom:14px}
       <div class="duo-card w">
         <div class="ic"><svg class="rot-sun" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B85E12" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.4 4.4l2.1 2.1M17.5 17.5l2.1 2.1M4.4 19.6l2.1-2.1M17.5 6.5l2.1-2.1"/></svg></div>
         <h3><span style="color:var(--warm-2)">Heizen</span> ohne Gas und Öl</h3>
-        <p>Aus einer Kilowattstunde Strom werden bis zu 5,3 Kilowattstunden Wärme. Kein Schornsteinfeger, kein Gasanschluss, keine Brennstofflieferung — und keine Sorge vor der nächsten CO₂-Preisstufe.</p>
+        <p>Aus einer Kilowattstunde Strom werden bis zu 5,3 Kilowattstunden Wärme. Kein Schornsteinfeger, kein Gasanschluss, keine Brennstofflieferung – und keine Sorge vor der nächsten CO₂-Preisstufe.</p>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#B85E12" stroke-width="2.6" stroke-linecap="round"><path d="M4 12.5l5 5L20 6.5"/></svg> Funktioniert bis −25 °C Außentemperatur</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#B85E12" stroke-width="2.6" stroke-linecap="round"><path d="M4 12.5l5 5L20 6.5"/></svg> Nicht betroffen von CO&#8322;-Preis und Bio-Brennstoffquoten des neuen Heizungsgesetzes</li>
@@ -730,7 +731,7 @@ footer .logo{margin-bottom:14px}
       <div class="duo-card c">
         <div class="ic"><svg class="rot-snow" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#14527E" stroke-width="1.25" stroke-linecap="round"><g id="sfB"><path d="M12 12V1.6M12 4.6L9.7 3M12 4.6l2.3-1.6M12 8.4L9.5 6.7M12 8.4l2.5-1.7"/></g><use href="#sfB" transform="rotate(60 12 12)"/><use href="#sfB" transform="rotate(120 12 12)"/><use href="#sfB" transform="rotate(180 12 12)"/><use href="#sfB" transform="rotate(240 12 12)"/><use href="#sfB" transform="rotate(300 12 12)"/><circle cx="12" cy="12" r="1.2" fill="#14527E" stroke="none"/></svg></div>
         <h3><span style="color:#14527E">Kühlen</span>, wenn es zählt</h3>
-        <p>Schlafzimmer bei 34 °C Außentemperatur auf angenehme 23 °C — leise genug, um durchzuschlafen. Moderne Innengeräte arbeiten ab 19 dB(A), das ist leiser als ein Flüstern.</p>
+        <p>Schlafzimmer bei 34 °C Außentemperatur auf angenehme 23 °C – leise genug, um durchzuschlafen. Moderne Innengeräte arbeiten ab 19 dB(A), das ist leiser als ein Flüstern.</p>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#14527E" stroke-width="2.6" stroke-linecap="round"><path d="M4 12.5l5 5L20 6.5"/></svg> Entfeuchtung gegen Schimmel im Souterrain</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#14527E" stroke-width="2.6" stroke-linecap="round"><path d="M4 12.5l5 5L20 6.5"/></svg> Pollenfilter für Allergiker</li>
@@ -752,9 +753,8 @@ footer .logo{margin-bottom:14px}
 <section class="calc-sec" id="foerderung">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">Förderrechner</div>
       <h2>Klimaanlage-Förderung 2026: wie viel zahlt der Staat?</h2>
-      <p class="lead">Ein kurzes Quiz, ein ehrliches Ergebnis: Frage für Frage zum Zuschuss. Seit der Reform der Bundesförderung für effiziente Gebäude vom 21. Juli 2026 gelten neue Sätze — und sie sinken alle sechs Monate. Wer früher beantragt, bekommt mehr.</p>
+      <p class="lead">Ein kurzes Quiz, ein ehrliches Ergebnis: Frage für Frage zum Zuschuss. Seit der Reform der Bundesförderung für effiziente Gebäude vom 21. Juli 2026 gelten neue Sätze – und sie sinken alle sechs Monate. Wer früher beantragt, bekommt mehr.</p>
     </div>
 
     <div class="calc-grid">
@@ -877,7 +877,6 @@ footer .logo{margin-bottom:14px}
 <section id="pakete">
   <div class="wrap">
     <div class="sec-head center">
-      <div class="eyebrow">Festpreis-Pakete</div>
       <h2>Klimaanlage mit Montage: Festpreise für 1 bis 5 Räume</h2>
       <p class="lead">Gerät, Montage, Kältemittelleitungen, Elektroanschluss, Inbetriebnahme und Antragsunterstützung. Was Sie unten sehen, steht auch auf der Rechnung.</p>
       <div class="brands">
@@ -893,9 +892,9 @@ footer .logo{margin-bottom:14px}
       <div class="pkg">
         <div class="rooms">Paket S</div>
         <h3>Ein Raum</h3>
-        <p class="desc">Schlafzimmer, Homeoffice oder Dachgeschoss — dort, wo es am dringendsten ist.</p>
+        <p class="desc">Schlafzimmer, Homeoffice oder Dachgeschoss – dort, wo es am dringendsten ist.</p>
         <div class="price"><span class="pre">ab</span><span class="p">2.449 €</span></div>
-        <div class="price-sub">nach Förderung — Komplettpreis <b>3.499 €</b> inkl. Einbau</div>
+        <div class="price-sub">nach Förderung – Komplettpreis <b>3.499 €</b> inkl. Einbau</div>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M4 12.5l5 5L20 6.5"/></svg> 1 Innen- + 1 Außengerät (z. B. Bosch Climate 6000i)</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M4 12.5l5 5L20 6.5"/></svg> Bis 5 m Leitungsweg inklusive</li>
@@ -910,12 +909,12 @@ footer .logo{margin-bottom:14px}
         <span class="tag">Am beliebtesten</span>
         <div class="rooms">Paket M</div>
         <h3>Zwei bis drei Räume</h3>
-        <p class="desc">Ein Außengerät versorgt alle Räume — Einbau je weiteres Innengerät nur 750 € Aufpreis (plus Gerät).</p>
+        <p class="desc">Ein Außengerät versorgt alle Räume – Einbau je weiteres Innengerät nur 750 € Aufpreis (plus Gerät).</p>
         <div class="price"><span class="pre">ab</span><span class="p">3.219 €</span></div>
-        <div class="price-sub">nach Förderung — ab <b>4.599 €</b> (2 Räume) bzw. <b>6.349 €</b> (3 Räume)</div>
+        <div class="price-sub">nach Förderung – ab <b>4.599 €</b> (2 Räume) bzw. <b>6.349 €</b> (3 Räume)</div>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M4 12.5l5 5L20 6.5"/></svg> Bis 3 Innengeräte, 1 Außengerät</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M4 12.5l5 5L20 6.5"/></svg> Förderfähig nach BEG — mit Antragsunterstützung</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M4 12.5l5 5L20 6.5"/></svg> Förderfähig nach BEG – mit Antragsunterstützung</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M4 12.5l5 5L20 6.5"/></svg> Hybridbetrieb: Ihre Heizung bleibt als Backup</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M4 12.5l5 5L20 6.5"/></svg> Elektroanschluss und Netzdienlichkeit</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M4 12.5l5 5L20 6.5"/></svg> Wartungsvertrag im 1. Jahr geschenkt</li>
@@ -926,14 +925,14 @@ footer .logo{margin-bottom:14px}
       <div class="pkg">
         <div class="rooms">Paket L · Individuell</div>
         <h3>Ihre Wunsch-Konfiguration</h3>
-        <p class="desc">Stellen Sie ein, wie viele Innengeräte Sie brauchen — der Preis rechnet sofort mit.</p>
+        <p class="desc">Stellen Sie ein, wie viele Innengeräte Sie brauchen – der Preis rechnet sofort mit.</p>
         <div class="cfg-row">
           <button type="button" class="cfg-btn" id="cfgMinus" aria-label="Ein Innengerät weniger">&minus;</button>
           <div class="cfg-mid"><b id="cfgN">4</b><small>Innenger&auml;te</small></div>
           <button type="button" class="cfg-btn" id="cfgPlus" aria-label="Ein Innengerät mehr">+</button>
         </div>
         <div class="price"><span class="pre" id="cfgPre">ab</span><span class="p" id="cfgFoerd">5.599 €</span></div>
-        <div class="price-sub" id="cfgSub">nach Förderung — Komplettpreis <b>7.999 €</b> inkl. Einbau</div>
+        <div class="price-sub" id="cfgSub">nach Förderung – Komplettpreis <b>7.999 €</b> inkl. Einbau</div>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M4 12.5l5 5L20 6.5"/></svg> 1 Außengerät für bis zu 5 Innengeräte (z. B. Bosch)</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M4 12.5l5 5L20 6.5"/></svg> Heizlastberechnung nach DIN EN 12831</li>
@@ -954,9 +953,8 @@ footer .logo{margin-bottom:14px}
 <section id="ablauf" style="background:var(--sand)">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">So läuft es ab</div>
       <h2>Klimaanlage einbauen lassen &ndash; in vier Schritten</h2>
-      <p class="lead">Von der Heizlastberechnung über die Montage bis zum Förderbescheid: Sie müssen nichts über Förderrichtlinien wissen. Das ist unser Job — und der wichtigste Teil davon passiert, bevor Sie irgendetwas unterschreiben.</p>
+      <p class="lead">Von der Heizlastberechnung über die Montage bis zum Förderbescheid: Sie müssen nichts über Förderrichtlinien wissen. Das ist unser Job – und der wichtigste Teil davon passiert, bevor Sie irgendetwas unterschreiben.</p>
     </div>
     <div class="ablauf-grid">
       <div class="artcard rv">
@@ -972,7 +970,7 @@ footer .logo{margin-bottom:14px}
       <div class="step">
         <div class="n">2</div>
         <h3>Festpreis und Förderung</h3>
-        <p>Sie bekommen ein Angebot mit Festpreis und die Förderzusage-Prognose. Wir erstellen die Bestätigung zum Antrag und begleiten Sie Schritt für Schritt bei der Antragstellung — vor Vertragsbeginn, sonst ist die Förderung weg.</p>
+        <p>Sie bekommen ein Angebot mit Festpreis und die Förderzusage-Prognose. Wir erstellen die Bestätigung zum Antrag und begleiten Sie Schritt für Schritt bei der Antragstellung – vor Vertragsbeginn, sonst ist die Förderung weg.</p>
       </div>
       <div class="step">
         <div class="n">3</div>
@@ -982,7 +980,7 @@ footer .logo{margin-bottom:14px}
       <div class="step">
         <div class="n">4</div>
         <h3>Geld auf dem Konto</h3>
-        <p>Wir stellen Ihnen alle Nachweise fertig zusammen — Sie reichen sie mit wenigen Klicks ein, der Zuschuss geht direkt an Sie. Danach sind wir für Wartung und Störungen weiter Ihr Ansprechpartner.</p>
+        <p>Wir stellen Ihnen alle Nachweise fertig zusammen – Sie reichen sie mit wenigen Klicks ein, der Zuschuss geht direkt an Sie. Danach sind wir für Wartung und Störungen weiter Ihr Ansprechpartner.</p>
       </div>
     </div>
     </div>
@@ -990,26 +988,26 @@ footer .logo{margin-bottom:14px}
 </section>
 
 <!-- ============ REFERENZEN ============ -->
-<section style="background:var(--sand)">
+<!-- Kundenstimmen ausgeblendet, bis echte Bewertungen vorliegen. Zum Einblenden style=display:none entfernen. -->
+<section style="background:var(--sand);display:none">
   <div class="wrap">
     <div class="sec-head center">
-      <div class="eyebrow">Kundenstimmen</div>
       <h2>Erfahrungen mit Montage und Förderung</h2>
     </div>
     <div class="quotes">
       <div class="quote ph">
         <span class="stars"><svg viewBox="0 0 24 24" fill="#D9A03C" width="15" height="15"><path d="M12 2l3 6.5 7 .8-5.2 4.7L18.3 21 12 17.4 5.7 21l1.5-7L2 9.3l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="#D9A03C" width="15" height="15"><path d="M12 2l3 6.5 7 .8-5.2 4.7L18.3 21 12 17.4 5.7 21l1.5-7L2 9.3l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="#D9A03C" width="15" height="15"><path d="M12 2l3 6.5 7 .8-5.2 4.7L18.3 21 12 17.4 5.7 21l1.5-7L2 9.3l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="#D9A03C" width="15" height="15"><path d="M12 2l3 6.5 7 .8-5.2 4.7L18.3 21 12 17.4 5.7 21l1.5-7L2 9.3l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="#D9A03C" width="15" height="15"><path d="M12 2l3 6.5 7 .8-5.2 4.7L18.3 21 12 17.4 5.7 21l1.5-7L2 9.3l7-.8z"/></svg></span>
-        <p>„Platzhalter — hier gehört eine echte Kundenstimme hin. Am besten mit dem konkreten Ergebnis: alte Heizung, neue Anlage, Zuschusshöhe, Montagedauer."</p>
+        <p>„Platzhalter – hier gehört eine echte Kundenstimme hin. Am besten mit dem konkreten Ergebnis: alte Heizung, neue Anlage, Zuschusshöhe, Montagedauer."</p>
         <div class="who"><span class="av">MS</span><div><b>Vorname N.</b><small>Ort · Paket M</small></div></div>
       </div>
       <div class="quote ph">
         <span class="stars"><svg viewBox="0 0 24 24" fill="#D9A03C" width="15" height="15"><path d="M12 2l3 6.5 7 .8-5.2 4.7L18.3 21 12 17.4 5.7 21l1.5-7L2 9.3l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="#D9A03C" width="15" height="15"><path d="M12 2l3 6.5 7 .8-5.2 4.7L18.3 21 12 17.4 5.7 21l1.5-7L2 9.3l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="#D9A03C" width="15" height="15"><path d="M12 2l3 6.5 7 .8-5.2 4.7L18.3 21 12 17.4 5.7 21l1.5-7L2 9.3l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="#D9A03C" width="15" height="15"><path d="M12 2l3 6.5 7 .8-5.2 4.7L18.3 21 12 17.4 5.7 21l1.5-7L2 9.3l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="#D9A03C" width="15" height="15"><path d="M12 2l3 6.5 7 .8-5.2 4.7L18.3 21 12 17.4 5.7 21l1.5-7L2 9.3l7-.8z"/></svg></span>
-        <p>„Platzhalter — greifen Sie hier den häufigsten Einwand auf und entkräften Sie ihn, etwa Lautstärke, Optik der Außeneinheit oder Stromkosten im Winter."</p>
+        <p>„Platzhalter – greifen Sie hier den häufigsten Einwand auf und entkräften Sie ihn, etwa Lautstärke, Optik der Außeneinheit oder Stromkosten im Winter."</p>
         <div class="who"><span class="av">TK</span><div><b>Vorname N.</b><small>Ort · Paket L</small></div></div>
       </div>
       <div class="quote ph">
         <span class="stars"><svg viewBox="0 0 24 24" fill="#D9A03C" width="15" height="15"><path d="M12 2l3 6.5 7 .8-5.2 4.7L18.3 21 12 17.4 5.7 21l1.5-7L2 9.3l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="#D9A03C" width="15" height="15"><path d="M12 2l3 6.5 7 .8-5.2 4.7L18.3 21 12 17.4 5.7 21l1.5-7L2 9.3l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="#D9A03C" width="15" height="15"><path d="M12 2l3 6.5 7 .8-5.2 4.7L18.3 21 12 17.4 5.7 21l1.5-7L2 9.3l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="#D9A03C" width="15" height="15"><path d="M12 2l3 6.5 7 .8-5.2 4.7L18.3 21 12 17.4 5.7 21l1.5-7L2 9.3l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="#D9A03C" width="15" height="15"><path d="M12 2l3 6.5 7 .8-5.2 4.7L18.3 21 12 17.4 5.7 21l1.5-7L2 9.3l7-.8z"/></svg></span>
-        <p>„Platzhalter — eine Stimme zum Förderantrag wirkt hier am stärksten, weil genau davor die meisten Interessenten zurückschrecken."</p>
+        <p>„Platzhalter – eine Stimme zum Förderantrag wirkt hier am stärksten, weil genau davor die meisten Interessenten zurückschrecken."</p>
         <div class="who"><span class="av">AB</span><div><b>Vorname N.</b><small>Ort · Paket S</small></div></div>
       </div>
     </div>
@@ -1020,25 +1018,24 @@ footer .logo{margin-bottom:14px}
 <section id="faq">
   <div class="wrap">
     <div class="sec-head center">
-      <div class="eyebrow">Häufige Fragen</div>
       <h2>Häufige Fragen zur Klimaanlage mit Heizfunktion</h2>
     </div>
     <div class="faq">
       <details class="f" open>
         <summary>Kann eine Klimaanlage wirklich ein ganzes Haus heizen?</summary>
-        <div class="a"><p>Ja — technisch ist sie eine Luft-Luft-Wärmepumpe. Entscheidend ist die Auslegung: Wir rechnen die Heizlast jedes Raumes und dimensionieren die Innengeräte danach. In gut gedämmten Häusern trägt die Anlage die volle Heizlast, in Altbauten arbeiten wir mit größeren Innengeräten oder ergänzen einzelne Räume.</p><p>Moderne Geräte heizen bis −25 °C Außentemperatur und liefern dabei immer noch mehr Wärme, als sie Strom verbrauchen.</p></div>
+        <div class="a"><p>Ja – technisch ist sie eine Luft-Luft-Wärmepumpe. Entscheidend ist die Auslegung: Wir rechnen die Heizlast jedes Raumes und dimensionieren die Innengeräte danach. In gut gedämmten Häusern trägt die Anlage die volle Heizlast, in Altbauten arbeiten wir mit größeren Innengeräten oder ergänzen einzelne Räume.</p><p>Moderne Geräte heizen bis −25 °C Außentemperatur und liefern dabei immer noch mehr Wärme, als sie Strom verbrauchen.</p></div>
       </details>
       <details class="f">
-        <summary>Wie hoch ist die Förderung genau — und wie lange noch?</summary>
+        <summary>Wie hoch ist die Förderung genau – und wie lange noch?</summary>
         <div class="a"><p>Die Grundförderung beträgt 30 Prozent. Wenn Sie selbst im Haus wohnen und eine alte Öl-, Kohle-, Gas-Etagen- oder Nachtspeicherheizung stilllegen, kommen 16 Prozent Klimageschwindigkeitsbonus dazu. Bei einem zu versteuernden Haushaltseinkommen bis 50.000 Euro gibt es zusätzlich 10 bis 40 Prozent. Gedeckelt wird bei 70 Prozent, bei Einkommen bis 30.000 Euro bei 80 Prozent.</p><p>Wichtig: Der Klimageschwindigkeitsbonus sinkt ab 1. Februar 2027 halbjährlich um 4 Prozentpunkte und entfällt Mitte 2028. Auch die förderfähigen Höchstkosten sinken alle sechs Monate um 750 Euro. Wer wartet, zahlt drauf.</p></div>
       </details>
       <details class="f">
         <summary>Was kostet mich das Heizen dann im Winter?</summary>
-        <div class="a"><p>Eine gute Anlage erreicht eine Jahresarbeitszahl von etwa 4. Das heißt: Für jede Kilowattstunde Strom bekommen Sie rund vier Kilowattstunden Wärme. Bei einem Strompreis von 32 Cent kostet die Kilowattstunde Wärme also etwa 8 Cent — Gas liegt inklusive CO₂-Abgabe und Grundpreis meist darüber, Tendenz steigend.</p><p>Mit einem Wärmepumpentarif oder eigener Photovoltaik wird der Abstand deutlich größer.</p></div>
+        <div class="a"><p>Eine gute Anlage erreicht eine Jahresarbeitszahl von etwa 4. Das heißt: Für jede Kilowattstunde Strom bekommen Sie rund vier Kilowattstunden Wärme. Bei einem Strompreis von 32 Cent kostet die Kilowattstunde Wärme also etwa 8 Cent – Gas liegt inklusive CO₂-Abgabe und Grundpreis meist darüber, Tendenz steigend.</p><p>Mit einem Wärmepumpentarif oder eigener Photovoltaik wird der Abstand deutlich größer.</p></div>
       </details>
       <details class="f">
-        <summary>Wie laut ist das Außengerät — und was sagt der Nachbar?</summary>
-        <div class="a"><p>Moderne Außengeräte liegen im Nachtbetrieb bei etwa 40 bis 45 dB(A) in einem Meter Abstand. Ab 2026 gelten für förderfähige Geräte verschärfte Schallanforderungen — 10 Dezibel unter den gesetzlichen Grenzwerten. Wir prüfen bei der Besichtigung den Aufstellort und weisen die Einhaltung der TA Lärm an der Nachbargrenze nach.</p></div>
+        <summary>Wie laut ist das Außengerät – und was sagt der Nachbar?</summary>
+        <div class="a"><p>Moderne Außengeräte liegen im Nachtbetrieb bei etwa 40 bis 45 dB(A) in einem Meter Abstand. Ab 2026 gelten für förderfähige Geräte verschärfte Schallanforderungen – 10 Dezibel unter den gesetzlichen Grenzwerten. Wir prüfen bei der Besichtigung den Aufstellort und weisen die Einhaltung der TA Lärm an der Nachbargrenze nach.</p></div>
       </details>
       <details class="f">
         <summary>Brauche ich eine Genehmigung?</summary>
@@ -1046,15 +1043,15 @@ footer .logo{margin-bottom:14px}
       </details>
       <details class="f">
         <summary>Was ist mit dem Kältemittel ab 2028?</summary>
-        <div class="a"><p>Ab 1. Januar 2028 sind nur noch Wärmepumpen mit natürlichen Kältemitteln wie Propan förderfähig. Wenn Sie ein Multisplit- oder VRF-System planen, ist das ein Argument, jetzt zu handeln — solche Systeme mit Propan gibt es aus Sicherheitsgründen absehbar nicht. Für einzelne Räume gibt es bereits Propan-Geräte, die wir Ihnen anbieten können.</p></div>
+        <div class="a"><p>Ab 1. Januar 2028 sind nur noch Wärmepumpen mit natürlichen Kältemitteln wie Propan förderfähig. Wenn Sie ein Multisplit- oder VRF-System planen, ist das ein Argument, jetzt zu handeln – solche Systeme mit Propan gibt es aus Sicherheitsgründen absehbar nicht. Für einzelne Räume gibt es bereits Propan-Geräte, die wir Ihnen anbieten können.</p></div>
       </details>
       <details class="f">
         <summary>Kann ich die Anlage auch finanzieren oder in Raten zahlen?</summary>
-        <div class="a"><p>Ja. Auf Wunsch bieten wir Ratenkauf über einen Finanzierungspartner an — Konditionen und Rate weisen wir transparent im Angebot aus.</p><p>Das Rechenbeispiel dahinter: Wer mit der Anlage von Öl oder Gas auf effizientes Heizen mit Strom wechselt, senkt seine laufenden Heizkosten oft deutlich. Diese monatliche Ersparnis kann die Rate ganz oder teilweise tragen — so finanziert sich die Anlage im besten Fall aus den eingesparten Heizkosten. Wie viel das bei Ihnen ausmacht, rechnen wir Ihnen unverbindlich vor.</p></div>
+        <div class="a"><p>Ja. Auf Wunsch bieten wir Ratenkauf über einen Finanzierungspartner an – Konditionen und Rate weisen wir transparent im Angebot aus.</p><p>Das Rechenbeispiel dahinter: Wer mit der Anlage von Öl oder Gas auf effizientes Heizen mit Strom wechselt, senkt seine laufenden Heizkosten oft deutlich. Diese monatliche Ersparnis kann die Rate ganz oder teilweise tragen – so finanziert sich die Anlage im besten Fall aus den eingesparten Heizkosten. Wie viel das bei Ihnen ausmacht, rechnen wir Ihnen unverbindlich vor.</p></div>
       </details>
       <details class="f">
         <summary>Was passiert, wenn der Förderantrag abgelehnt wird?</summary>
-        <div class="a"><p>Ihr Vertrag mit uns enthält eine aufschiebende Bedingung: Er wird erst wirksam, wenn die Förderzusage vorliegt. Bleibt sie aus, entstehen Ihnen keine Kosten. Genau deshalb wird der Antrag immer <em>vor</em> Vertragsbeginn gestellt — wir bereiten alle Unterlagen vor und begleiten Sie dabei. Wichtig: ein Vertrag ohne diese Klausel gilt als vorzeitiger Vorhabenbeginn und kostet die komplette Förderung.</p></div>
+        <div class="a"><p>Ihr Vertrag mit uns enthält eine aufschiebende Bedingung: Er wird erst wirksam, wenn die Förderzusage vorliegt. Bleibt sie aus, entstehen Ihnen keine Kosten. Genau deshalb wird der Antrag immer <em>vor</em> Vertragsbeginn gestellt – wir bereiten alle Unterlagen vor und begleiten Sie dabei. Wichtig: ein Vertrag ohne diese Klausel gilt als vorzeitiger Vorhabenbeginn und kostet die komplette Förderung.</p></div>
       </details>
     </div>
   </div>
@@ -1064,7 +1061,6 @@ footer .logo{margin-bottom:14px}
 <section class="ratgeber" id="ratgeber">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">Gut zu wissen</div>
       <h2>Klimaanlage kaufen mit Montage: Kosten, Verbrauch, Förderung</h2>
     </div>
     <div class="rat-grid">
@@ -1245,7 +1241,7 @@ footer .logo{margin-bottom:14px}
         <div class="logo">
           <img class="logo-img" src="data:image/png;base64,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" alt="Climon" width="1047" height="369">
         </div>
-        <p style="max-width:300px">Klimaanlagen zum Heizen und Kühlen — Planung, Montage und Förderberatung aus einer Hand — in der Region Ulm &amp; Oberschwaben.</p>
+        <p style="max-width:300px">Klimaanlagen zum Heizen und Kühlen – Planung, Montage und Förderberatung aus einer Hand – in der Region Ulm &amp; Oberschwaben.</p>
       </div>
       <div>
         <h4>Leistungen</h4>
@@ -1540,11 +1536,11 @@ footer .logo{margin-bottom:14px}
       var voll = CFG_PREIS[cfgN];
       $('#cfgPre').textContent = 'ab';
       $('#cfgFoerd').textContent = eur(Math.round(voll * 0.7));
-      $('#cfgSub').innerHTML = 'nach F&ouml;rderung &mdash; Komplettpreis <b>' + eur(voll) + '</b> inkl. Einbau';
+      $('#cfgSub').innerHTML = 'nach F&ouml;rderung &ndash; Komplettpreis <b>' + eur(voll) + '</b> inkl. Einbau';
     } else {
       $('#cfgPre').textContent = '';
       $('#cfgFoerd').textContent = 'individuell';
-      $('#cfgSub').innerHTML = 'ab 6 Innenger&auml;ten kalkulieren wir Ihr Projekt pers&ouml;nlich &mdash; Angebot in 24 Stunden';
+      $('#cfgSub').innerHTML = 'ab 6 Innenger&auml;ten kalkulieren wir Ihr Projekt pers&ouml;nlich &ndash; Angebot in 24 Stunden';
     }
   }
   $('#cfgMinus').addEventListener('click', function(){ if (cfgN > 1){ cfgN--; cfgRender(); } });
@@ -1636,11 +1632,13 @@ footer .logo{margin-bottom:14px}
 .cc-opts label{display:flex;align-items:center;gap:10px;padding:5px 0;cursor:pointer}
 .cc-opts input{width:17px;height:17px;accent-color:#12855F}
 .cc-btns{display:flex;gap:10px;flex-wrap:wrap}
-.cc-btns button{flex:1;min-width:130px;padding:12px 14px;border-radius:999px;font-size:14px;font-weight:700;cursor:pointer;border:1.5px solid transparent;font-family:inherit}
+.cc-btns button{flex:1;min-width:130px;padding:12px 14px;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;border:1.5px solid transparent;font-family:inherit}
 .cc-accept{background:#12855F;color:#fff}
 .cc-decline{background:transparent;color:#E8F1F0;border-color:rgba(255,255,255,.4)!important}
 .cc-settings{background:transparent;color:#9FB6B4;border:none!important;flex:0 0 100%;font-weight:600!important;font-size:13px!important;padding:4px!important;text-decoration:underline;cursor:pointer}
 @media(max-width:520px){.cc-btns button{min-width:100%}}
+h1,h2,h3{text-wrap:balance}
+.sec-head h2{margin-bottom:18px}
 </style>
 <div class="cc-wrap" id="ccWrap" role="dialog" aria-modal="false" aria-label="Cookie-Einstellungen">
   <div class="cc-box">
